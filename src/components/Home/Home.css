@@ -1,66 +1,107 @@
 .home {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	gap: 35px;
-	margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    margin: 0;
+    padding: 0 20px; /* Add some horizontal padding for small screens */
 }
+
 .home h1 {
-	margin-top: 150px;
-	font-size: 60px;
-	font-weight: 500;
-	text-align: center;
+    margin-top: 150px;
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2; /* Improve readability */
 }
+
 .home h1 span {
-	background: linear-gradient(80deg, #1adf08 10%, #2ec5f3 100%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    background: linear-gradient(80deg, #1adf08 10%, #2ec5f3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 .home h4 {
-	color: #bebebe;
-	font-size: 30px;
-	text-align: center;
+    color: #bebebe;
+    font-size: 30px;
+    text-align: center;
 }
+
 .link_redirect ul {
-	display: flex;
-	list-style: none;
-	gap: 100px;
-	cursor: pointer;
-	justify-content: center;
-	margin-bottom: 200px;
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Reduced gap to keep icons closer */
+    justify-content: center;
+    margin: 50px 0; /* Adjusted margin */
+    padding: 0; /* Reset padding */
+    flex-wrap: wrap; /* Allows wrapping if the icons don't fit in one line */
 }
+
 .link_redirect li {
-	display: block;
+    display: block;
 }
-.email,
-.linkedin,
+
+.email {
+    height: 45px;
+    width: 47px;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+.linkedin {
+    height: 45px;
+    width: 45px; /* Ensure consistent width for icons */
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
 .github {
-	height: 45px;
-	padding-top: 5px;
+    height: 45px;
+    width: 45px; /* Ensure consistent width for icons */
+    border-radius: 50%;
+    padding-top: 4px;
 }
+
+.link_redirect img{
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
 .link_redirect img:hover {
-	transform: scale(1.1) translateZ(20px);
-	box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) translateZ(20px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
+
+/* Mobile styles */
 @media(max-width: 768px) {
-	.home h1 {
-		margin-top: 50px;
-		width: 100%;
-		font-size: 30px;
+    .home {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .home h1 {
+        margin-top: 50px;
+        font-size: 28px;
+        line-height: 1.1; /* Adjust line-height for smaller screens */
+    }
+
+    .home h4 {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .link_redirect ul {
+        gap: 10px; /* Reduce gap between icons */
+        margin: 20px 0; /* Adjust margin for mobile screens */
+    }
+
+    .email {
+		height: 30px; /* Reduce icon size */
+        width: 35px; /* Ensure consistent width */
 	}
-	.home h4 {
-		margin-top: 20px;
-		width: 100%;
-		font-size: 20px;
-	}
-	.link_redirect ul {
-		gap: 15px;
-		justify-content: center;
-	}
-	.email,
-	.linkedin,
-	.github {
-		height: 25px;
-	}
+
+    .linkedin,
+    .github {
+        height: 30px; /* Reduce icon size */
+        width: 30px; /* Ensure consistent width */
+    }
 }

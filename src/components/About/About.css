@@ -12,7 +12,7 @@
 }
 
 h1 {
-    padding: 0px;
+    padding: 0;
     font-size: 40px;
     font-weight: 400;
 }
@@ -20,12 +20,14 @@ h1 {
 .about-sections {
     display: flex;
     gap: 50px;
+    flex-direction: row; /* Ensure horizontal layout on larger screens */
 }
 
 .about-left img {
     height: 400px;
     width: 400px;
     border-radius: 50%;
+    object-fit: cover; /* Ensure image aspect ratio is maintained */
 }
 
 .about-right {
@@ -88,22 +90,25 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Mobile styles */
 @media(max-width: 768px) {
     .about {
-        gap: 50px;
-        margin: 50px 70px;
-        align-items: center;
+        gap: 30px;
+        margin: 20px 30px; /* Reduced margin for smaller screens */
     }
 
-    .about h1 {
-        font-size: 40px;
-        padding: 0;
+    .about-title h1 {
+        font-size: 32px; /* Smaller font size for mobile */
+    }
+
+    .about-sections {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
     }
 
     .about-left img {
         height: 200px;
         width: 200px;
-        border-radius: 50%;
     }
 
     .about-paragraph p {
@@ -111,23 +116,31 @@ h1 {
         line-height: 22px;
     }
 
+    .about-skills {
+        gap: 15px; /* Reduced gap */
+    }
+
     .about-skill {
-        gap: 20px;
+        flex-direction: column; /* Stack skill name and progress bar vertically */
+        align-items: flex-start;
+        gap: 10px; /* Reduced gap */
     }
 
     .about-skill p {
-        font-size: 12px;
+        font-size: 14px; /* Smaller font size */
+        min-width: auto; /* Remove min-width for smaller screens */
     }
 
     .about-skill hr {
+        width: 100%; /* Full width progress bar */
         height: 6px;
     }
 
     .certificates h2 {
-        font-size: 30px;
+        font-size: 24px; /* Smaller font size for mobile */
     }
 
     .certificates {
-        font-size: 12px;
+        font-size: 14px; /* Adjust font size for readability on mobile */
     }
 }

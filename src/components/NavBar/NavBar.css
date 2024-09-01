@@ -66,16 +66,8 @@
 }
 
 .navbar {
-  background-color: transparent; /* Default background color */
-  color: #ffffff; /* Default text color */
-}
-
-.close-toggle {
-  display: none;
-}
-
-html {
-  scroll-behavior: smooth;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 /* Mobile styles */
@@ -90,8 +82,8 @@ html {
     width: 30px;
     height: 21px;
     position: absolute;
-    right: 3px;
-    top: 17px;
+    right: 10px;
+    top: 15px;
   }
 
   .open-toggle span {
@@ -136,17 +128,18 @@ html {
   .nav-menu {
     position: fixed;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     top: 0;
     right: 0;
     gap: 30px;
     background-color: #4b4b4b;
-    width: 200px;
+    width: 40%;
     height: 100%;
     z-index: 1;
     transition: right 0.5s;
-    right: -250px;
-    padding-top: 60px; 
+    right: -100%;
+    padding-top: 60px;
+    padding-left: 20px; /* Add padding on the left for better alignment */
   }
 
   .nav-menu.open {
@@ -155,19 +148,16 @@ html {
 
   .nav-menu li {
     font-size: 20px;
-    padding-left: 30px;
-    flex-direction: row;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    margin-top: 40px; 
+    padding: 10px 0;
+    margin: 0;
+    display: block;
   }
 
   .close-toggle {
     display: block;
     position: absolute;
     top: 20px;
-    right: 15px;
+    right: 20px;
     width: 24px;
     height: 24px;
     cursor: pointer;

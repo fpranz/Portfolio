@@ -79,11 +79,11 @@ const Contact = () => {
         {/* Contact form for users to fill out */}
         <form onSubmit={onSubmit} className="contact-right">
           <label>Your Name:</label>
-          <input type="text" placeholder='Enter your Name' name='name' required />
+          <input type="text" id="name" placeholder='Enter your Name' name='name' required />
           <label>Your Email:</label>
-          <input type="email" placeholder='Enter your Email' name='email' required />
+          <input type="email" id="email" placeholder='Enter your Email' name='email' required />
           <label>Write your message here:</label>
-          <textarea name="message" rows='8' placeholder='Enter your Message' required></textarea>
+          <textarea id="message" name="message" rows='8' placeholder='Enter your Message' required></textarea>
           <button type='submit' className='button-submit'>Work with me!!!</button>
         </form>
       </div>
